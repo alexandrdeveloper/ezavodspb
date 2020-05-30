@@ -657,3 +657,99 @@ section {
     color: #e93314; }
   .slides-num__general {
     margin-left: 20px; }
+
+footer {
+  background-image: url("../img/footer/footer-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  padding-left: 120px;
+  padding-right: 75px;
+  padding-bottom: 50px; }
+
+.footer__container, .footer__row {
+  width: 100%; }
+
+.footer__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  .footer__row:not(:last-child) {
+    margin-bottom: 100px; }
+
+.footer__phone {
+  font-family: 'Gotham Pro Medium', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  display: block;
+  margin-bottom: 24px; }
+
+.footer__address, .footer__email, .footer__politics {
+  font-family: 'Gotham Book', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  display: block;
+  line-height: 1;
+  margin-bottom: 24px; }
+
+.footer__email, .footer__politics {
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+  .footer__email:hover, .footer__politics:hover {
+    border-color: white; }
+
+.footer__social {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .footer__social a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #912d1f; }
+    .footer__social a:not(:last-child) {
+      margin-right: 20px; }
+    .footer__social a i {
+      font-family: 'FA-BR-400';
+      font-size: 20px;
+      color: #fff; }
+
+.footer__copyright, .footer__politics {
+  font-family: 'Gotham Book', sans-serif;
+  font-size: 14px;
+  color: #fff; }
