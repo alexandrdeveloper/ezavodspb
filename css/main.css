@@ -91,12 +91,20 @@ section {
   padding: 18px;
   width: 100%;
   max-width: 200px;
-  background-color: #e93314;
-  color: #fff;
+  background: transparent;
+  color: #e93314;
   font-family: 'Gotham Pro Medium', sans-serif;
   font-size: 16px;
   text-align: center;
-  border-radius: 5px; }
+  border-radius: 5px;
+  position: relative;
+  -webkit-transition: .3s ease-out;
+  -o-transition: .3s ease-out;
+  transition: .3s ease-out;
+  border: 2px solid #e93314; }
+  .theme-btn:hover {
+    color: #fff;
+    background-color: #e93314; }
 
 /**** Header ****/
 .header {
@@ -431,7 +439,8 @@ section {
       background: transparent;
       font-size: 0;
       width: 30px;
-      height: 30px; }
+      height: 30px;
+      cursor: pointer; }
       .events__content .slick-arrow::before {
         content: '\f178';
         display: inline-block;
@@ -443,6 +452,48 @@ section {
         content: '\f177'; }
     .events__content .slick-next {
       z-index: 10;
-      left: 40px; }
+      left: 50px; }
       .events__content .slick-next::before {
         content: '\f178'; }
+
+.product {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-image: url("../img/product/blue-bg.jpg");
+  background-size: 25% 100%;
+  background-repeat: repeat-y; }
+  .product__image, .product__content {
+    width: 50%;
+    border: 1px solid red; }
+  .product__list {
+    -webkit-columns: 2;
+       -moz-columns: 2;
+            columns: 2;
+    margin-bottom: 65px; }
+  .product__item {
+    font-family: 'Gotham Pro Medium', sans-serif;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 25px;
+    -webkit-transition: .3s ease-out;
+    -o-transition: .3s ease-out;
+    transition: .3s ease-out; }
+    .product__item a {
+      display: block;
+      font-size: 14px;
+      -webkit-transition: .3s ease-out;
+      -o-transition: .3s ease-out;
+      transition: .3s ease-out;
+      color: #1d2224; }
+      .product__item a:hover {
+        -webkit-transform: translateX(10px);
+            -ms-transform: translateX(10px);
+                transform: translateX(10px);
+        color: #e93314; }
