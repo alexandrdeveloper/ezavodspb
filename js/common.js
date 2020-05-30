@@ -51,6 +51,17 @@ $(document).ready(function() {
 	});
 
 
+	$('.menu-toggle').on('click', function() {
+		$('body').toggleClass('no-scroll');
+		$('.modal-menu').toggleClass('modal_visible');
+
+	});
+
+	$('.modal_close').on('click', function() {
+		$('.modal').removeClass('modal_visible');
+		$('body').removeClass('no-scroll');
+	});
+
 
 
 
