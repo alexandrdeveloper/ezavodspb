@@ -17,26 +17,33 @@
 <body class="">
 
 	<div class="wrapper">
-		<header class="header">
+		<header class="header header_single">
 			<div class="header-info">
 				<div class="header-info__top">
-					<a href="index.html" class="logo header__logo">
-						<img src="img/header/logo.png" class="logo__image" alt="ЭКСПЕРИМЕНТАЛЬНЫЙ ЗАВОД">
-						<span>ЭКСПЕРИМЕНТАЛЬНЫЙ ЗАВОД</span>
-					</a>
-					<a href="#" class="shopping">
-						<i class="fal fa-shopping-bag"></i>
-						<div class="shopping__value">
-							<span>0</span>
+					<div class="container">
+						<a href="index.html" class="logo header__logo">
+							<img src="img/header/logo.png" class="logo__image" alt="ЭКСПЕРИМЕНТАЛЬНЫЙ ЗАВОД">
+							<span>ЭКСПЕРИМЕНТАЛЬНЫЙ<br>ЗАВОД</span>
+						</a>
+						<div class="header-info__top-item">
+							<a href="tel:88122108579" class="header-info__phone">8 812 210 85 79</a>
+							<a href="#" class="search">
+								<i class="fal fa-search"></i>						
+							</a>						
 						</div>
-					</a>
+						
+						<a href="#" class="shopping">
+							<i class="fal fa-shopping-bag"></i>
+							<div class="shopping__value">
+								<span>0</span>
+							</div>
+						</a>
+					</div>						
 				</div>
 				<!-- /.header-info__top -->
-				<div class="header-info__main">
-					<h1>Передовые технологии производства и испытания строительных конструкций и материалов</h1>
-				</div>
-				<!-- /.header-info__main -->
-				<div class="header-info__navbar">
+			
+			<div class="header-info__navbar">
+				<div class="container header-info__navbar-container">
 					<ul class="header-info__menu">
 						<li><a href="#">О заводе</a></li>
 						<li><a href="#">Продукция</a></li>
@@ -50,37 +57,133 @@
 						<span></span>
 					</button>
 					<!-- /.header-info__menu -->
+					
 				</div>
-				<!-- /.header-info__navbar -->
-				<div class="header-info__bottom">
-					<a href="tel:88122108579" class="header-info__phone">8 812 210 85 79</a>
-					<a href="#" class="search">
-						<i class="fal fa-search"></i>						
-					</a>
+					
+				
+			</div>
+			<!-- /.header-info__navbar -->	
+			</div>
+			<div class="header-info__crumbs">
+				<div class="container">
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Продукция</a></li>
+					</ul>
 				</div>
-				<!-- /.header-info__bottom -->
+			</div>
+				
+				
+				<!-- /.header-info__crumbs -->			
 			</div>
 			<!-- /.header__info -->
-			<div class="header-slider">
-				<div class="header-slider__item">
-					<img src="img/header/slider/slide1.jpg" alt="#">
-				</div>
-				<div class="header-slider__item">
-					<img src="img/header/slider/slide1.jpg" alt="#">
-				</div>
-				<div class="header-slider__item">
-					<img src="img/header/slider/slide1.jpg" alt="#">
-				</div>
-			</div>
-			<!-- /.header__slider -->
 		</header>
 		<!-- /header -->
 		<main>
 			<article>
-				<h1>Ограничители движения</h1>
-				<p>Inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on suitable disposed do although blessing he juvenile in. Society or if excited forbade. Here name off yet she long sold easy whom. Differed oh cheerful procured pleasure securing suitable in. Hold rich on an he oh fine. Chapter ability shyness article welcome be do on service. </p>
-				<p>Inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on suitable disposed do although blessing he juvenile in. Society or if excited forbade. Here name off yet she long sold easy whom. Differed oh cheerful procured pleasure securing suitable in. Hold rich on an he oh fine. Chapter ability shyness article welcome be do on service. </p>
+				<div class="container">
+					<h1>Ограничители движения</h1>
+					<p>Inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on suitable disposed do although blessing he juvenile in. Society or if excited forbade. Here name off yet she long sold easy whom. Differed oh cheerful procured pleasure securing suitable in. Hold rich on an he oh fine. Chapter ability shyness article welcome be do on service. </p>
+					<p>Inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on suitable disposed do although blessing he juvenile in. Society or if excited forbade. Here name off yet she long sold easy whom. Differed oh cheerful procured pleasure securing suitable in. Hold rich on an he oh fine. Chapter ability shyness article welcome be do on service. </p>
+				</div>
+									
 			</article>
+			<section class="catalog">
+				<div class="container">
+					<div class="catalog__item">
+						<div class="catalog__image"><img src="img/catalog/item-1.png" alt="B-9"></div>
+						<!-- /.catalog__image -->
+						<div class="catalog__info">
+							<h2>Б-9</h2>
+							<span class="catalog__item-name">Надолб</span>
+							<table class="catalog__config">
+								<tr>
+									<td>Диаметр, мм</td>
+									<td>Высота, мм</td>
+									<td>Масса, кг</td>
+									<td>Тип поверхности</td>
+								</tr>
+								<tr>
+									<td>500</td>
+									<td>240</td>
+									<td>73</td>
+									<td>Бетонная окрашенная</td>
+								</tr>
+							</table>
+							<!-- /.catalog__config -->
+							<a href="#" class="catalog__more">Стоимость</a>
+
+							
+						</div>
+						<!-- /.catalog__info -->
+						<table class="catalog__calc">
+							<tr>
+								<td>Тип</td>
+								<td>Цена, руб</td>
+								<td>Наличие на складе</td>
+								<td>Кол-во, шт</td>
+								<td></td>
+
+							</tr>
+							<tr>
+								<td>Серый</td>
+								<td>791,00</td>
+								<td>Нет в наличии</td>
+								<td><input type="number" placeholder="1"></td>
+								<td><a href="#" class="theme-btn table-btn">В корзину</a></td>
+							</tr>
+						</table>
+					</div>
+					<!-- /.catalog__item -->
+					<div class="catalog__item">
+						<div class="catalog__image"><img src="img/catalog/item-1.png" alt="B-9"></div>
+						<!-- /.catalog__image -->
+						<div class="catalog__info">
+							<h2>Б-9</h2>
+							<span class="catalog__item-name">Надолб</span>
+							<table class="catalog__config">
+								<tr>
+									<td>Диаметр, мм</td>
+									<td>Высота, мм</td>
+									<td>Масса, кг</td>
+									<td>Тип поверхности</td>
+								</tr>
+								<tr>
+									<td>500</td>
+									<td>240</td>
+									<td>73</td>
+									<td>Бетонная окрашенная</td>
+								</tr>
+							</table>
+							<!-- /.catalog__config -->
+							<a href="#" class="catalog__more">Стоимость</a>
+
+							
+						</div>
+						<!-- /.catalog__info -->
+						<table class="catalog__calc">
+							<tr>
+								<td>Тип</td>
+								<td>Цена, руб</td>
+								<td>Наличие на складе</td>
+								<td>Кол-во, шт</td>
+								<td></td>
+
+							</tr>
+							<tr>
+								<td>Серый</td>
+								<td>791,00</td>
+								<td>Нет в наличии</td>
+								<td><input type="number" placeholder="1"></td>
+								<td><a href="#" class="theme-btn table-btn">В корзину</a></td>
+							</tr>
+						</table>
+					</div>
+					<!-- /.catalog__item -->
+				</div>
+					
+			</section>
+			<!-- /.catalog -->
 			<section class="events">
 				<div class="events__container">
 					<h2 class="section__title events__title">События компании</h2>

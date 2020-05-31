@@ -8,11 +8,10 @@ $(document).ready(function() {
 	headerSlider.slick({
 		slidesToShow: 1,
 		autoplay: true,
-		autoplaySpeed: 7000,
+		autoplaySpeed: 5000,
 		arrows: false,
 		speed: 2000,
-		cssEase: 'ease-in-out',
-		touchMove: false
+		cssEase: 'ease-in-out'
 	});
 
 	eventsSlider.slick({
