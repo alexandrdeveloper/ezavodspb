@@ -316,8 +316,18 @@
 		</a>
 		<div class="container">
 			<h2>Обратная связь</h2>
-			<p>Оставьте свои контакты, наши специалисты свяжутся с Вами 
-и ответят на все возникшие вопросы</p>
+			<p>Оставьте свои контакты, наши специалисты свяжутся с Вами <br>
+		и ответят на все возникшие вопросы</p>
+			<form action="" class="modal-feedback__form">
+				<div class="modal-feedback__form-row">
+					<input type="text" placeholder="Ваше Имя">
+					<input type="text" placeholder="Ваш номер">
+				</div>				
+				<textarea name="message" id="" cols="30" rows="10" placeholder="Ваши комментарии"></textarea>
+				<input type="checkbox" id="personal">
+				<label for="personal">Даю согласие на обработку моих персональных данных</label>
+				<button class="theme-btn" type="submit">Отправить</button>
+			</form>
 		</div>
 		<button class="modal_close">
 			<span></span>
@@ -325,6 +335,25 @@
 		</button>
 	</div>
 	<!-- /.modal modal-feedback -->
+
+	<div class="modal modal-search">
+		<a href="index.html" class="logo logo_modal">
+			<img src="img/header/logo.png" class="logo__image" alt="ЭКСПЕРИМЕНТАЛЬНЫЙ ЗАВОД">
+			<span>ЭКСПЕРИМЕНТАЛЬНЫЙ ЗАВОД</span>
+		</a>
+		<div class="container">
+			<h2>Искать по ключевому слову</h2>
+			<form action="#" class="modal-search__form">
+				<input type="text">
+				<button class="theme-btn" type="submit">Найти</button>
+			</form>
+		</div>
+		<button class="modal_close">
+			<span></span>
+			<span></span>
+		</button>
+	</div>
+	<!-- /.modal modal-search -->
 
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>
