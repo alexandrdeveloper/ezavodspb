@@ -118,8 +118,7 @@ $(document).ready(function() {
 	let productItem = $('.product__item').find('a');
 
 	productItem.on('mouseover', function() {
-		let productImage = $(this).find('img');
-		
+		let productImage = $(this).find('img');		
 		let productDisplay = $('.product__image-container');
 		if (productImage) { 
 			return dataCopy(productImage, productDisplay);			
@@ -135,6 +134,9 @@ $(document).ready(function() {
 		a.clone().appendTo(b);
 
 	}
+
+
+	$('.preloader').addClass('preloader_hidden');
 
 
 
