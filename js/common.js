@@ -5,6 +5,8 @@ $(document).ready(function() {
 	let objectImgSlider = $('.object__image');
 	let objectInfoSlider = $('.object__info');
 
+
+
 	headerSlider.slick({
 		slidesToShow: 1,
 		autoplay: true,
@@ -14,11 +16,34 @@ $(document).ready(function() {
 		cssEase: 'ease-in-out'
 	});
 
+
+
+	
+
 	eventsSlider.slick({
-		slidesToShow: 2,
-		centerMode: true,
-		centerPadding: '200px'
+		slidesToShow: 3,
+		infinite: false,
+		arrows: false ,
+		swipe: false
 	});
+
+	$('.events-next').on('click', function() {
+		if (eventsSlider.hasClass('events__content_moved') == false) {
+			eventsSlider.addClass('events__content_moved');
+		} else {
+			eventsSlider.slick('slickNext');
+		}
+	});
+
+	$('.events-prev').on('click', function() {
+		if (eventsSlider.hasClass('events__content_moved') == true) {
+			eventsSlider.removeClass('events__content_moved');
+		} else {
+			eventsSlider.slick('slickPrev');
+		}
+	});
+
+	
 	let currentOutput = $('.slides-num__current');
 	let generalOutput = $('.slides-num__general');
 
@@ -47,6 +72,10 @@ $(document).ready(function() {
 		fade: true,
 		asNavFor: $('.object__image'),
 		speed: 1000,
+	});
+
+	$('.events__content .slick-next').on('click', function() {
+		eventsSlider.addClass('events__content_moved');
 	});
 
 
