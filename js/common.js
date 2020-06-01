@@ -21,10 +21,34 @@ $(document).ready(function() {
 	
 
 	eventsSlider.slick({
-		slidesToShow: 3,
+		slidesToShow: 4,
 		infinite: false,
 		arrows: false ,
-		swipe: false
+		swipe: false,
+		responsive: [
+		{
+			breakpoint: 1366,
+			settings: {
+				slidesToShow: 3,
+			}
+		}, {
+			breakpoint: 767,
+			settings: {
+				slidesToShow: 3,
+			}
+		}, {
+			breakpoint: 576,
+			settings: {
+				slidesToShow: 2,
+
+			}
+		}, {
+			breakpoint: 368,
+			settings: {
+				slidesToShow: 1,
+				swipe: true
+			}
+		}]
 	});
 
 	$('.events-next').on('click', function() {
@@ -89,6 +113,28 @@ $(document).ready(function() {
 		$('.modal').removeClass('modal_visible');
 		$('body').removeClass('no-scroll');
 	});
+
+
+	let productItem = $('.product__item').find('a');
+
+	productItem.on('mouseover', function() {
+		let productImage = $(this).find('img');
+		
+		let productDisplay = $('.product__image-container');
+		if (productImage) { 
+			return dataCopy(productImage, productDisplay);			
+		} else {
+			return false;
+		}
+		
+		
+	});
+
+	function dataCopy(a, b) {
+		b.find('img').remove();
+		a.clone().appendTo(b);
+
+	}
 
 
 
