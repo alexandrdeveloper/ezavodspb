@@ -103,14 +103,18 @@ $(document).ready(function() {
 	});
 
 
+
 	$('.menu-toggle').on('click', function() {
 		$('body').toggleClass('no-scroll');
 		$('.modal-menu').toggleClass('modal_visible');
+		
+
 
 	});
 
 	$('.modal_close').on('click', function() {
 		$('.modal').removeClass('modal_visible');
+
 		$('body').removeClass('no-scroll');
 	});
 
@@ -136,8 +140,18 @@ $(document).ready(function() {
 	}
 
 
-	$('.preloader').addClass('preloader_hidden');
+	//$('.preloader').addClass('preloader_hidden');
 
+	gsap.to('.preloader', {duration: 1, ease: 'power3.out', y: '-100%', delay: 3})
+
+	var headerTl = gsap.timeline();
+
+	headerTl.to('.preloader', {duration: 1, ease: 'power3.out', y: '-100%', delay: 1})
+			.from('.header__logo', {duration: .5, ease: 'power3.out', opacity: 0, y: '20'}, "-=0.7")
+			.from('.shopping', {duration: .5, ease: 'power3.out', opacity: 0, y: '20'}, "-=0.75")			
+			.from('.header-info__main', {duration: .5, ease: 'power3.out', opacity: 0, y: '20'}, "-=.75")			
+			.staggerFrom('.header-info__menu li', 1, {x: 200, opacity: 0, ease: 'power3.out'}, 0.1, "-=.75")
+			.staggerFrom('.header-info__bottom a', 1, {x: -50, opacity: 0, ease: 'power3.out'}, 0.1, "-=.75");
 
 
 

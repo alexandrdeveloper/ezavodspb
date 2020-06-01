@@ -183,13 +183,6 @@ section {
     .preloader .logo__image .logo__circle {
       -webkit-animation: circle 10s linear infinite;
               animation: circle 10s linear infinite; }
-  .preloader_hidden {
-    -webkit-animation: preloaderhidden .5s ease-out;
-            animation: preloaderhidden .5s ease-out;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards; }
 
 @-webkit-keyframes circle {
   0 {
@@ -1623,7 +1616,9 @@ footer {
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
-    display: none; }
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%); }
     .modal-menu__content {
       width: 75%;
       display: -webkit-box;
