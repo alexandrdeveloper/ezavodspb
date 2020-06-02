@@ -14,11 +14,7 @@ $(document).ready(function() {
 		arrows: false,
 		speed: 2000,
 		cssEase: 'ease-in-out'
-	});
-
-
-
-	
+	});	
 
 	eventsSlider.slick({
 		slidesToShow: 4,
@@ -186,16 +182,32 @@ $(document).ready(function() {
 	
 
 
+	
 
+	$(window).on('resize', function() {
+		let winW = $(window).innerWidth();		
+		menuSubLink.on('mouseover', function() { 
+			if (winW > 567) {		
+			subMenuContainer.find('ul').remove();
+			menuSubLink.find('a').removeClass('active');
+			$(this).find('a').toggleClass('active');					
+			$(this).find('ul').clone().appendTo(subMenuContainer);	
+			} else {
+				return false;
+			}
+		});
 
-	menuSubLink.on('mouseover', function() { 
+		menuSubLink.on('click', function() {
+			if (winW <= 567) {				
+				$(this).find('a').toggleClass('active');
+			} else {
+				return false;
+			}
+		})
 		
-		subMenuContainer.find('ul').remove();
-
-		menuSubLink.find('a').removeClass('active');
-		$(this).find('a').toggleClass('active');					
-		$(this).find('ul').clone().appendTo(subMenuContainer);	
 	});
+
+	
 
 	
 
