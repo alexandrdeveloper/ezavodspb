@@ -102,21 +102,63 @@ $(document).ready(function() {
 		eventsSlider.addClass('events__content_moved');
 	});
 
+	let searchButton = $('.search');
+	let searchModal = $('.modal-search');
+	let feedbackButton = $('.feedback');
+	let feedbackModal = $('.modal-feedback');
+	let modalClose = $('.modal_close');
 
+	searchButton.on('click', function(e) {
+		e.preventDefault();
+		modalUp(searchModal);
+	}); 
+
+	feedbackButton.on('click', function(e) {
+		e.preventDefault();
+		modalUp(feedbackModal);
+	})
+
+	modalClose.on('click', function(e) {
+		e.preventDefault();
+		$('body').removeClass('no-scroll');
+		$('.modal').removeClass('modal_visible');
+	});
+
+
+	function modalUp(a) {
+		$('body').addClass('no-scroll');
+		a.toggleClass('modal_visible');
+	}
+	
+	
+
+	var menuItemAnim = gsap.timeline();
+	menuItemAnim.staggerFrom('.modal-menu__nav-list>li', 1, {y: 200, opacity: 0, ease: 'power3.out'}, 0.1, "-=.75")
+				.from('.modal-contacts', {duration: .5, x: '100%', ease: 'power3.out'}, "-=.7")
+				.staggerFrom('.modal-contacts__image, .footer__contacts_modal, .theme-btn_fullw', 1, {y: 200, opacity: 0, ease: 'power3.out'}, 0.1, "-=.2");
+	menuItemAnim.pause();
 
 	$('.menu-toggle').on('click', function() {
 		$('body').toggleClass('no-scroll');
-		$('.modal-menu').toggleClass('modal_visible');
-		
-
-
+		$('.modal-menu').toggleClass('modal_visible');		
+		menuItemAnim.restart(2);
 	});
-
-	$('.modal_close').on('click', function() {
-		$('.modal').removeClass('modal_visible');
-
+	$('.menu_close').on('click', function() {	
+		if (menuItemAnim.reversed()) {
+		    menuItemAnim.play();
+		} else {
+		    menuItemAnim.reverse();
+		}
+		$('.modal-menu').removeClass('modal_visible');
 		$('body').removeClass('no-scroll');
+		
 	});
+
+
+
+	
+
+
 
 
 	let productItem = $('.product__item').find('a');
@@ -128,8 +170,7 @@ $(document).ready(function() {
 			return dataCopy(productImage, productDisplay);			
 		} else {
 			return false;
-		}
-		
+		}	
 		
 	});
 
@@ -138,6 +179,25 @@ $(document).ready(function() {
 		a.clone().appendTo(b);
 
 	}
+
+	let menuSubLink = $('.modal-menu__nav-list li');
+	let subMenuContainer = $('.modal-menu__submenu');
+
+	
+
+
+
+
+	menuSubLink.on('mouseover', function() { 
+		
+		subMenuContainer.find('ul').remove();
+
+		menuSubLink.find('a').removeClass('active');
+		$(this).find('a').toggleClass('active');					
+		$(this).find('ul').clone().appendTo(subMenuContainer);	
+	});
+
+	
 
 
 	//$('.preloader').addClass('preloader_hidden');
