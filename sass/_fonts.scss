@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'FA-BR-400' ; 
+  src: url('../fonts/Font Awesome 5 Brands-Regular-400.otf') format('OpenType');
+}
+  
+@font-face {
+  font-family: 'FA-PL-300';  
+  src: url('../fonts/Font Awesome 5 Pro-Light-300.otf') format('OpenType');
+}
+  
+@font-face {
+  font-family: 'FA-PR-400';  
+  src: url('../fonts/Font Awesome 5 Pro-Regular-400.otf') format('OpenType');
+}
+  
+@font-face {
+  font-family: 'FA-PS-900';  
+  src: url('../fonts/Font Awesome 5 Pro-Solid-900.otf') format('OpenType');
+}
+  
+@font-face {
+  font-family: 'FA';  
+  src: url('../fonts/FontAwesome.otf') format('OpenType');
+}
+  
+
+@font-face {
+  font-family: 'Gotham Pro Medium';
+  src: url('../fonts/GothamPro-Medium.eot');
+  src: url('../fonts/GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GothamPro-Medium.woff') format('woff'),
+  url('../fonts/GothamPro-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro Bold';
+  src: url('../fonts/GothamPro-Bold.eot');
+  src: url('../fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GothamPro-Bold.woff') format('woff'),
+  url('../fonts/GothamPro-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('../fonts/Gotham-Book.eot');
+  src: url('../fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Gotham-Book.woff') format('woff'),
+      url('../fonts/Gotham-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@mixin medium {
+  font-family: 'Gotham Pro Medium', sans-serif;  
+}
+
+@mixin bold{
+  font-family: 'Gotham Pro Bold', sans-serif;
+}
+
+@mixin book{
+  font-family: 'Gotham Book', sans-serif;
+}

@@ -1,0 +1,334 @@
+
+body
+	margin: 0
+	padding: 0
+	overflow-x: hidden
+	+medium
+	line-height: 1.5
+	font-size: 16px
+
+	&.no-scroll
+		overflow-y: hidden
+* 
+	box-sizing: border-box
+	outline: none
+	line-height: 1.5
+	
+
+a 
+	text-decoration: none
+	color: #1b1a1a
+button, input 
+	outline: none
+
+ul 
+	padding-left: 0
+
+ul li 
+	list-style: none
+	font-size: 18px
+
+i.fa 
+	font-family: 'FA-PS-900'
+
+i.fal
+	font-family: 'FA-PL-300'
+
+h2 
+	display: inline-block 
+	+bold
+	font-size: 30px
+	color: #201f1f
+	margin: 0
+section 
+	padding: 75px 0
+.section__title
+	padding: 60px 0
+.container
+	width: 80%
+	max-width: 1400px
+	margin-left: auto
+	margin-right: auto
+
+.theme-btn
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: space-around
+	border: none
+	padding: 18px
+	width: 100%
+	max-width: 200px
+	background: transparent
+	color: #e93314
+	+medium
+	font-size: 16px
+	text-align: center
+	border-radius: 5px
+	position: relative
+	transition: .3s ease-out
+	color: #fff
+	background-color: #e93314
+	cursor: pointer
+	overflow: hidden
+	transition: .3s
+	animation: button .3s
+	span 
+		display: inline-block
+		position: relative
+		width: 100%		
+		transition: all .5s
+	i 
+		font-family: 'FA-PL-300'
+		color: #fff	
+		position: absolute
+		left: 150%	
+		transform: translateX(20px)			
+		transition: transform .5s
+	&:hover
+		span
+			transform: translateX(-20px)
+		i			
+			left: auto
+			right: 18px			
+			transform: translateX(0)
+	&_fullw 
+		width: 100%
+		max-width: none
+
+
+.page-top
+	display: flex
+	justify-content: center
+	align-items: center
+	position: fixed
+	bottom: 90px
+	right: 45px
+	width: 46px
+	height: 46px
+	background-color: #000
+	border-radius: 5px
+	z-index: 40	
+	transform: translateX(300%)
+	transition: .3s
+	&::before
+		content: '\f176'
+		font-family: 'FA-PR-400';
+		font-size: 20px
+		color: #fff
+	&:hover
+		background: #e93314
+	&_visible
+		transform: translateX(0)
+
+
+
+
+.logo__image 
+	position: relative	
+	display: flex
+	justify-content: center
+	align-items: center
+	.logo__center			
+		display: block
+		width: 100%	
+		
+	.logo__circle
+		position: absolute
+		width: 100%
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		transform-origin: center
+		transition: transform .5s
+		&:hover
+			animation: circle 10s linear infinite
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: #fff
+	z-index: 99
+	.logo__image
+		max-width: 110px
+		transition: .5s
+		.logo__circle
+			animation: circle 10s linear infinite
+
+	&_hidden				
+		//animation: preloaderhidden .5s ease-out
+		//animation-delay: 2s
+		//animation-fill-mode: forwards
+
+%transition_all_03s 
+  transition:all .3s ease
+
+%backface_visibility_hidden
+  backface-visibility:hidden
+  -webkit-backface-visibility:hidden
+
+
+*, *:before, *:after 
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+
+.swiper-container   
+  // display:inline-block
+  // vertical-align:top
+ 
+  transition: opacity .6s ease, transform .3s ease
+  &.nav-slider
+    width: 20%
+    padding-left: 5px
+    .swiper-slide
+      cursor: pointer
+      opacity: .4
+      transition:opacity .3s ease
+      &.swiper-slide-active
+        opacity: 1
+      
+      .content
+        width: 100%
+        .title
+          font-size: 20px
+        
+      
+    
+  
+  &:hover
+    .swiper-button-prev,
+    .swiper-button-next
+      transform: translateX(0)
+      opacity: 1
+      visibility: visible
+    
+  
+  &.loading
+    opacity: 0
+    visibility: hidden
+  
+
+.swiper-wrapper
+
+
+.swiper-slide
+  overflow: hidden
+  
+  .slide-bgimg
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-position:center
+    background-size:cover
+  
+  .entity-img
+    display: none
+  
+  .content
+    position: absolute
+    top: 40%
+    left: 0
+    width: 50%
+    padding-left: 5%
+    color: #fff
+    .title
+      font-size: 2.6em
+      font-weight: bold
+      margin-bottom: 30px
+    
+    .caption
+      display: block
+      font-size: 13px
+      line-height: 1.4
+      transform: translateX(50px)
+      opacity: 0
+      transition: opacity .3s ease, transform .7s ease
+      &.show
+        transform: translateX(0)
+        opacity: 1
+      
+    
+  
+
+
+
+
+@keyframes circle
+	0 
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
+
+@keyframes preloaderhidden
+	0%
+		transform: translateY(0)
+	45% 
+		transform: translateY(-50%)
+
+	100%
+		transform: translateY(-100%)
+		
+
+	
+article
+	width: 100%
+	padding: 45px 0
+	
+	
+	h1 
+		+bold 
+		font-size: 30px
+		display: inline-block
+		margin-top: 0
+		margin-bottom: 45px
+	p 
+		display: inline-block
+		margin-top: 0
+		margin-bottom: 30px
+		+book
+		line-height: 1.8
+
+
+
+@media screen and (max-width: 1024px)
+	.theme-btn
+		padding: 12px
+
+@media screen and (max-width: 1024px)
+	.theme-btn
+		font-size: 14px
+
+@media screen and (max-width: 991px)
+	.container
+		width: calc(100% - 100px)
+	.section__title
+		padding-bottom: 24px
+		padding-top: 24px
+
+@media screen and (max-width: 767px)
+	.container
+		width: calc(100% - 60px)
+	section
+		padding-top: 50px
+		padding-bottom: 50px
+	h2 
+		display: block
+		width: 100%
+		text-align: center
+		padding-left: 1.3em
+		padding: 1.3em
+		font-size: 22px
+
+@media screen and (max-width: 360px)
+	h2 
+		font-size: 22px

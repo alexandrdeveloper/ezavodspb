@@ -1,0 +1,174 @@
+.product 	
+	padding: 0
+	position: relative
+	z-index: 2
+	
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-image: url('../img/product/bg-light.jpg')
+		background-repeat: repeat
+		z-index: -1
+	&__container
+		display: flex
+		flex-direction: row
+		width: 100%		
+		margin-left: auto
+		margin-right: auto
+		max-width: none
+		background-image: url('../img/product/dots-bg.png')
+		background-size: 100% auto 
+		background-position: center
+		background-repeat: no-repeat
+
+
+	&__image,
+	&__content
+		width: 50%
+		padding: 60px 0
+	&__image
+		padding-left: 10%
+	&__content
+		padding-right: 10%
+		h2 
+			padding-top: 0
+	&__image
+		//padding-left: 70px
+		padding-right: 70px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-image: url('../img/product/blue-bg.jpg')	
+		background-size: 60% 100%
+		background-repeat: repeat-y
+		&-container
+			height: 80%
+			width: 100%
+			position: relative
+			overflow: hidden
+			img 
+				display: block
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				height: 110%
+				width: auto
+	&__content
+		
+	&__list
+		columns: 2
+		margin-bottom: 65px
+		
+	&__item
+		+medium
+		display: inline-block
+		width: 100%
+		margin-bottom: 25px
+		transition: .3s ease-out
+		img 
+			display: none		
+		a
+			display: block
+			font-size: 14px 
+			transition: .3s ease-out
+			color: #1d2224
+			&:hover
+				transform: translateX(10px)
+				color: #e93314	
+				
+
+
+@media screen and (min-width: 1367px)
+	.product__item a
+		font-size: 18px
+
+@media screen and (min-width: 1600px)
+	.product__item a
+		font-size: 20px
+
+@media screen and (min-width: 1920px)
+	.product__item a
+		font-size: 24px
+
+@media screen and (min-width: 2170px)
+	.product__item a
+		font-size: 28px
+@media screen and (max-width: 1200px)
+	.product__item
+		margin-bottom: 12px
+@media screen and (max-width: 991px)
+	.product__item 
+		margin-bottom: 8px
+		a
+			font-size: 12px
+	.product__list
+		margin-bottom: 35px
+
+@media screen and (max-width: 767px)
+	.product__image
+		display: none
+	.product__content
+		width: 100%
+		padding-left: 1.3em
+		padding-right: 1.3em
+		position: relative
+		text-align: center
+		.theme-btn
+			margin-left: auto
+			margin-right: auto
+	.product__item
+		width: 100%
+		max-width: 420px
+		overflow: hidden
+		position: relative
+		&:hover
+			transform: none
+		&::after
+			content: ''
+			display: block
+			width: 100%
+			padding-bottom: 80%
+		img 
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			height: 175%
+		span 
+			display: flex
+			justify-content: center
+			align-items: center
+			position: absolute
+			bottom: 0
+			left: 0 
+			width: 100%
+			color: #fff 
+			z-index: 4
+			text-align: center
+			padding: 5% 
+			background-color: rgba(#000, .5)
+			vertical-align: middle
+			min-height: 30%
+		
+
+
+@media screen and (max-width: 576px)
+	.product__list
+		columns: 1
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: center
+
+
+	.product__item
+		max-width: 320px
+		margin-bottom: 30px
+		

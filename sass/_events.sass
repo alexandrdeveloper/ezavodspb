@@ -1,0 +1,303 @@
+.events
+	display: flex 
+	&__container
+		width: 100%
+		max-width: 1400px
+		overflow-x: hidden
+		position: relative
+		margin-left: auto
+		margin-right: auto
+		
+	&__title
+		margin-left: 15%
+	&__item
+		position: relative
+		z-index: 1
+		&::after
+			content: ''
+			display: block
+			width: 100%
+			padding-top: 100%
+			background: transparent
+			transition: .5s ease-out
+			border-radius: 10px
+		&:hover
+			z-index: 20
+			&::after 
+				background-color: #f9f8f1
+		&-info
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			width: 100%
+			height: 100%
+			padding: 40px
+			padding-left: 50px
+			p 
+				margin: 0
+				+medium
+				font-size: 16px
+				color: #1d2224
+				display: block
+	&__date
+		+medium 
+		color: #b41414
+		font-size: 14px
+		display: inline-block
+		margin-bottom: 50px
+
+	&__more
+		display: inline-block
+		position: absolute
+		bottom: 50px
+		background-color: #fff
+		width: 40px
+		height: 40px
+		border-radius: #fff
+		text-align: center
+		border-radius: 50%
+		line-height: 2
+		overflow: hidden
+		&:after 
+			content: '\f178'
+			display: inline-block
+			font-family: 'FA-PL-300'
+			font-size: 22px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			color: #000			
+			opacity: 1
+			transition: .3s ease-out
+			text-align: center
+		&::before
+			content: '\f178'
+			display: inline-block
+			position: absolute
+			font-family: 'FA-PL-300'
+			font-size: 22px
+			color: #e93314
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-200%, -50%)
+			transition: .3s ease-out
+		&:hover
+			&::after
+				transform: translate(200%, -50%)
+				opacity: 0
+			&::before
+				transform: translate(-50%, -50%)
+
+	
+		
+
+				
+	.event-buttons 
+		position: absolute
+		left: 15%
+		bottom: 30%
+		display: flex
+		flex-direction: row
+		z-index: 2
+	.theme-btn
+		margin-left: 15%
+
+	.events-arrow			
+		font-size: 30px
+		background: transparent
+		border: none		
+		z-index: 10
+
+		 
+			
+	.events-prev 
+		margin-right: 20px		
+		&::before
+			content: '\f177'
+			font-family: 'FA-PL-300'
+	.events-next
+		
+		&::before
+			content: '\f178'
+			font-family: 'FA-PL-300'
+	.events-arrow
+		&::before
+			transition: .3s
+	.events-arrow:hover 
+		&::before
+			color: #b41414
+
+
+	&__content
+		position: relative
+		margin-bottom: 50px
+		width: 100%
+		transition: transform .5s
+		transform: translateX(15%)
+
+		&_moved 
+			transform: translateX(-15%)
+		.slick-arrow
+			position: absolute
+			bottom: 40px
+			left: 0
+			border: none 
+			background: transparent
+			font-size: 0
+			width: 30px
+			height: 30px
+			cursor: pointer
+			&::before
+				content: '\f178'
+				display: inline-block
+				font-family: 'FA-PL-300'
+				font-size: 28px
+		.slick-prev
+			z-index: 10
+			&::before
+				content: '\f177'
+				
+		.slick-next
+			z-index: 10
+			left: 50px
+			&::before
+				content: '\f178'
+
+
+
+@media screen and (max-width: 991px)
+	.events__item-info
+		padding: 35px
+		padding-left: 40px
+		p 
+			font-size: 12px
+	.events__date
+		margin-bottom: 20px
+	.events__title
+		margin-left: 0
+		text-align: center
+		width: 100%
+		
+
+
+@media screen and (max-width: 860px)
+	.events__item-info
+		padding: 25px
+		padding-left: 28px
+		p 
+			font-size: 15px
+	.events__date
+		margin-bottom: 20px
+	.events .events-arrow
+		font-size: 25px
+	.events .events-next
+		left: 40px
+
+	.events__more
+		left: auto
+		right: 25px
+		bottom: 25px
+
+	
+@media screen and (min-width: 1400px)
+	.events__content,
+	.events__content_moved
+		transform: translateX(0)
+		width: 90%
+		margin-left: auto
+		margin-right: auto
+		max-width: 1400px		
+	.events .event-buttons
+		left: 5%
+	.events .theme-btn
+		margin-left: 5%
+	.events__title
+		margin-left: 0
+
+@media screen and (max-width: 1100px)
+	.events__item-info
+		a.events__date
+			margin-bottom: 20px
+	.events__more
+		bottom: 30px
+	.events__item-info
+		padding: 20px
+		padding-left: 40px
+	.events .event-buttons
+		bottom: 25%
+
+
+
+@media screen and (max-width: 991px)
+	.events .event-buttons
+		bottom: 30%
+
+@media screen and (max-width: 767px)
+	
+	.events__item-info
+		padding: 25px
+		padding-left: 28px
+		p 
+			font-size: 14px
+	.events__date
+		margin-bottom: 10px
+	.events .events-arrow
+		font-size: 25px
+	.events .events-next
+		left: 40px
+@media screen and (max-width: 705px)
+	.events__item-info p 
+		font-size: 13px
+
+@media screen and (max-width: 640px)
+	.events__item-info
+		padding: 12px
+		padding-left: 18px
+
+@media screen and (max-width: 576px)
+	.events__content,
+	.events__content_moved
+		transform: none
+	.events__item
+		width: 320px
+	.events__date,
+	.events__item-info p 
+		font-size: 16px
+	.events__item-info
+		padding: 12px
+		padding-left: 26px
+	.events .theme-btn
+		margin-left: auto
+		margin-right: auto
+
+
+@media screen and (max-width: 460px)
+	.events__item-info
+		padding: 8%
+		padding-left: 10%
+	.events__more
+		bottom: 8%
+		right: 8%
+	.events__item-info p 
+		font-size: 14px
+
+@media screen and (max-width: 366px)
+	.events__container
+		width: 100%
+		text-align: center
+	.events__content
+		width: 100%
+		&_moved 
+			transform: none	 
+	.events .events-prev
+		left: 12px
+	.events .events-next 
+		left: 56px
+
+	.events__container
+		margin-left: 0
+

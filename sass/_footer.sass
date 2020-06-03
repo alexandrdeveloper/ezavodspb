@@ -1,0 +1,90 @@
+footer
+	background-image: url('../img/footer/footer-bg.jpg')
+	background-size: cover
+	background-position: center 
+	padding-top: 100px
+	padding-bottom: 50px
+
+.footer 
+	&__container
+		width: 80%
+		margin-left: auto
+		margin-right: auto
+		max-width: 1400px
+	&__row 
+		width: 100%
+	&__row 
+		display: flex
+		justify-content: space-between
+		align-items: flex-start 
+		&:not(:last-child)
+			margin-bottom: 100px
+	&__phone 
+		+medium 
+		font-size: 24px
+		color: #fff
+		display: block
+		margin-bottom: 24px
+	&__address,
+	&__email,
+	&__politics
+		+book 
+		font-size: 16px
+		color: #fff
+		display: block
+		line-height: 1
+		margin-bottom: 24px
+	&__email,
+	&__politics
+		display: inline-block
+		padding-bottom: 10px
+		border-bottom: 1px solid rgba(#fff, .2)
+		transition: .3s
+		&:hover
+			border-color: rgba(#fff, 1)
+	&__social
+		display: flex
+		flex-direction: row
+
+		align-items: center
+		a 
+			display: flex
+			justify-content: center
+			align-items: center 
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			background-color: #912d1f
+			&:not(:last-child)
+				margin-right: 20px
+			i 
+				font-family: 'FA-BR-400'
+				font-size: 20px
+				color: #fff
+	&__copyright,
+	&__politics
+		+book 
+		font-size: 14px
+		color: #fff
+
+
+@media screen and (max-width: 991px)
+	footer 
+		padding: 70px 40px
+
+@media screen and (max-width: 767px)
+	footer 
+		padding: 70px 20px
+	.footer__row
+		flex-direction: column 
+		justify-content: flex-start
+		align-items: center 
+		text-align: center 
+	.footer__row:not(:last-child)
+		margin-bottom: 50px
+	.footer__social
+		justify-content: center 
+		margin-bottom: 40px
+	.footer__copyright
+		display: inline-block
+		margin-bottom: 12px

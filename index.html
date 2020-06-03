@@ -23,7 +23,7 @@
 	</div>
 
 	<div class="wrapper">
-		<header class="header">
+		<header class="header" id="header">
 			<div class="header-info">
 				<div class="header-info__top">
 					<a href="index.html" class="logo header__logo">
@@ -60,7 +60,7 @@
 				<div class="header-info__navbar">
 					<ul class="header-info__menu">
 						<li><a href="#">О заводе</a></li>
-						<li><a href="#">Продукция</a></li>
+						<li><a href="#" class="carret-open">Продукция</a></li>
 						<li><a href="#">FAQ</a></li>
 						<li><a href="#">Доставка</a></li>
 						<li><a href="#">Контакты</a></li>
@@ -168,8 +168,8 @@
 						</div>
 					</div>
 					<div class="event-buttons">
-						<button class="events-arrow events-prev"><i class="fal fa-long-arrow-left"></i></button>
-						<button class="events-arrow events-next"><i class="fal fa-long-arrow-right"></i></button>
+						<button class="events-arrow events-prev"></button>
+						<button class="events-arrow events-next"></button>
 					</div>
 					
 					<a href="#" class="theme-btn"><span>Все новости</span><i class="fa fa-arrow-right"></i></a>
@@ -477,7 +477,7 @@
 				<a href="mailto:sales@ezavodspb.ru" class="footer__email">sales@ezavodspb.ru</a>
 
 			</div>
-			<a href="#" class="theme-btn theme-btn_fullw feedback"><span>Обратная связь</span><i class="fa fa-long-arrow-right"></i></a>
+			<a href="#" class="theme-btn theme-btn_fullw feedback"><span>Обратная связь</span><i class="fa fa-arrow-right"></i></a>
 			
 		</div>
 		<!-- /.modal-menu__sidebar -->
@@ -525,7 +525,7 @@
 			<h2>Искать по ключевому слову</h2>
 			<form action="#" class="modal-search__form">
 				<input type="text">
-				<button class="theme-btn" type="submit"><span>Найти</span><i class="fa fa-arrow-right"></i></button>
+				<button class="theme-btn" type="submit"><span>Найти</span><i class="fa fa-search"></i></button>
 			</form>
 		</div>
 		<button class="modal_close">
@@ -534,6 +534,8 @@
 		</button>
 	</div>
 	<!-- /.modal modal-search -->
+
+	<a href="#header" class="page-top"></a>
 
 	<script src="js/libs.min.js"></script>
 	<script src="js/gsap.min.js"></script>
