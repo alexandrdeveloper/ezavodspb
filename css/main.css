@@ -1017,8 +1017,7 @@ article {
     overflow-x: hidden;
     position: relative;
     margin-left: auto;
-    margin-right: auto;
-    border-left: 1px solid red; }
+    margin-right: auto; }
   .events__title {
     margin-left: 15%;
     padding-top: 0;
@@ -1198,11 +1197,6 @@ article {
       left: 50px; }
       .events__content .slick-next::before {
         content: '\f178'; }
-
-.events + .slick-slide.slick-current {
-  z-index: 20; }
-  .events + .slick-slide.slick-current .events-arrow {
-    opacity: 0; }
 
 @media screen and (max-width: 991px) {
   .events__item-info {
