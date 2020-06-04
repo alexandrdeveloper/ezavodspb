@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+	
+    
+
 
 	$(document).scroll(function(){
 	    if( $(document).scrollTop() - $('header').offset().top > 400) {
@@ -17,7 +20,7 @@ $(document).ready(function() {
 	let objectImgSlider = $('.object__image');
 	let objectInfoSlider = $('.object__info');
 
-
+   	
 
 	headerSlider.slick({
 		slidesToShow: 1,
@@ -84,7 +87,8 @@ $(document).ready(function() {
 		autoplay: true,
 		autoplaySpeed: 5000,
 		arrows: false,
-		speed: 1000,
+		speed: 2000,
+		infinite: true,
 		cssEase: 'ease-in-out',
 		asNavFor: $('.object__info')
 	});
@@ -95,9 +99,10 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		fade: true,
 		asNavFor: $('.object__image'),
-		speed: 1000,
+		speed: 2000,
 	});
 
+	
 
 
 	 
@@ -197,8 +202,13 @@ $(document).ready(function() {
 	});
 
 	function dataCopy(a, b) {
-		b.find('img').remove();
-		a.clone().appendTo(b);
+		let newImg = a;
+		let oldImg = b.find('img');
+		oldImg.remove();
+		newImg.clone().appendTo(b);		
+		
+		
+		
 
 	}
 
@@ -226,6 +236,9 @@ $(document).ready(function() {
 		menuItemAnim.restart(2);
 		
 	});
+
+
+	
 
 
 
@@ -317,6 +330,8 @@ let mainSliderOptions = {
 let mainSlider = new Swiper(mainSliderSelector, mainSliderOptions);
 
 
+
+	
 
 
 });

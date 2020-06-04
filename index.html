@@ -10,7 +10,9 @@
 	<link rel="stylesheet" type="text/css" href="css/libs.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">	
 	<link rel="stylesheet" href="css/main.css">	
-
+	<script>
+		
+	</script>
 		
 </head>
 
@@ -25,61 +27,64 @@
 	<div class="wrapper">
 		<header class="header" id="header">
 			<div class="header-info">
-				<div class="header-info__top">
-					<a href="index.html" class="logo header__logo">
-						<div class="logo__image" >
-							<img src="img/header/logo/center.png" class="logo__center" alt="center">
-							<img src="img/header/logo/perif.png" class="logo__circle" alt="center">
+				<div class="header-info__container">
+					<div class="header-info__top">
+						<a href="index.html" class="logo header__logo">
+							<div class="logo__image" >
+								<img src="img/header/logo/center.png" class="logo__center" alt="center">
+								<img src="img/header/logo/perif.png" class="logo__circle" alt="center">
+							</div>
+							<span>ЭКСПЕРИМЕНТАЛЬНЫЙ<br>ЗАВОД</span>
+						</a>
+						<div class="header-buttons">
+							<button class="menu-toggle">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+							<a href="#" class="shopping">
+								<i class="fal fa-shopping-bag"></i>
+								<div class="shopping__value">
+									<span>0</span>
+								</div>
+							</a>
+							<a href="#" class="search">
+								<i class="fal fa-search"></i>						
+							</a>
 						</div>
-						<span>ЭКСПЕРИМЕНТАЛЬНЫЙ<br>ЗАВОД</span>
-					</a>
-					<div class="header-buttons">
+						<a href="tel:88122108579" class="header-info__phone">8 812 210<i class="fa fa-circle"></i>85<i class="fa fa-circle"></i>79</a>
+						
+					</div>
+					<!-- /.header-info__top -->
+					<div class="header-info__main">
+						<h1>Передовые технологии<br>производства и испытания<br>строительных конструкций и<br>материалов</h1>
+					</div>
+					<!-- /.header-info__main -->
+					<div class="header-info__navbar">
+						<ul class="header-info__menu">
+							<li><a href="#">О заводе</a></li>
+							<li><a href="#" class="carret-open">Продукция</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Доставка</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
 						<button class="menu-toggle">
 							<span></span>
 							<span></span>
 							<span></span>
 						</button>
-						<a href="#" class="shopping">
-							<i class="fal fa-shopping-bag"></i>
-							<div class="shopping__value">
-								<span>0</span>
-							</div>
-						</a>
+						<!-- /.header-info__menu -->
+					</div>
+					<!-- /.header-info__navbar -->
+					<div class="header-info__bottom">
+						<a href="tel:88122108579" class="header-info__phone">8 812 210<i class="fa fa-circle"></i>85<i class="fa fa-circle"></i>79</a>
 						<a href="#" class="search">
 							<i class="fal fa-search"></i>						
 						</a>
 					</div>
-					<a href="tel:88122108579" class="header-info__phone">8 812 210 85 79</a>
+					<!-- /.header-info__bottom -->
+				</div>
 					
-				</div>
-				<!-- /.header-info__top -->
-				<div class="header-info__main">
-					<h1>Передовые технологии<br>производства и испытания<br>строительных конструкций и<br>материалов</h1>
-				</div>
-				<!-- /.header-info__main -->
-				<div class="header-info__navbar">
-					<ul class="header-info__menu">
-						<li><a href="#">О заводе</a></li>
-						<li><a href="#" class="carret-open">Продукция</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">Доставка</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
-					<button class="menu-toggle">
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
-					<!-- /.header-info__menu -->
-				</div>
-				<!-- /.header-info__navbar -->
-				<div class="header-info__bottom">
-					<a href="tel:88122108579" class="header-info__phone">8 812 210 85 79</a>
-					<a href="#" class="search">
-						<i class="fal fa-search"></i>						
-					</a>
-				</div>
-				<!-- /.header-info__bottom -->
 			</div>
 			<!-- /.header__info -->
 			<div class="header-slider swiper-container main-slider loading">
@@ -114,7 +119,7 @@
 			      </figure>      
 			    </div>
 			  </div>
-			 </div>
+			</div>
 			<!--
 			<div class="header-slider">
 				<div class="header-slider__item">
@@ -391,7 +396,7 @@
 			<div class="footer__container">
 				<div class="footer__row">
 					<div class="footer__contacts">
-						<a href="tel:88122108579" class="footer__phone">8 812 210  85  79</a>
+						<a href="tel:88122108579" class="footer__phone">8 812 210<i class="fa fa-circle"></i>85<i class="fa fa-circle"></i>79</a>
 						<span class="footer__address">Санкт-Петербург, Индустриальный пр., 44, к. 1</span>
 						<a href="mailto:sales@ezavodspb.ru" class="footer__email">sales@ezavodspb.ru</a>
 						<div class="footer__social">
@@ -472,7 +477,7 @@
 		<div class="modal-menu__sidebar modal-contacts">
 			<div class="modal-contacts__image"><img src="img/modal/sidebar-img.jpg" alt="img"></div>
 			<div class="footer__contacts footer__contacts_modal">
-				<a href="tel:88122108579" class="footer__phone">8 812 210  85  79</a>
+				<a href="tel:88122108579" class="footer__phone">8 812 210<i class="fa fa-circle"></i>85<i class="fa fa-circle"></i>79</a>
 				<span class="footer__address">Санкт-Петербург, Индустриальный пр., 44, к. 1</span>
 				<a href="mailto:sales@ezavodspb.ru" class="footer__email">sales@ezavodspb.ru</a>
 
