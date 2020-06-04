@@ -35,10 +35,17 @@
 			img 
 				display: block
 				position: absolute
-				width: 110%
-				top: 50%
+				width: 120%
+				top: 45%
 				left: 50%
-				transform: translate(-50%, -50%)
+				transform: translate(-50%, -50%) 
+				
+	.slick-active
+		img 
+			left: 50%
+			animation: objectSlide 2s linear
+
+						
 	&__info
 		position: relative
 		&-item
@@ -64,6 +71,9 @@
 				display: inline-block
 				font-family: 'FA-PL-300'
 				font-size: 30px
+			&:hover
+				&::before
+					color: #e93314
 		.slick-prev
 			z-index: 10
 			&::before
@@ -74,6 +84,14 @@
 			left: 50px
 			&::before
 				content: '\f178'
+
+@keyframes objectSlide
+	0% 
+		left: 50%
+		transform: translate(-70%, -50%) 
+	100%
+		left: 50%
+		transform: translate(-50%, -50%) 
 
 .slides-num
 	position: absolute

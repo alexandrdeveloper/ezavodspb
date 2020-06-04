@@ -2,11 +2,27 @@
 	display: flex
 	flex-direction: row
 	flex-wrap: nowrap 
+	background: url('../img/header/bg.jpg') repeat
+	position: relative
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background: url('../img/header/bg-map.png')
+		background-position: center center
+		background-size: 80% auto
+		background-repeat: no-repeat
+	
 	&-info 
 		width: 100%
-		background-image: url('../img/header/bg.jpg')
+		background-image: 
 		background-size: 100% auto
 		background-position: center center
+		background-repeat: no-repeat
 		padding: 0 70px
 		height: 100vh
 		max-height: 680px
@@ -15,6 +31,17 @@
 		justify-content: space-between
 		width: 60%
 		box-sizing: border-box
+
+		&__container
+			width: 100%
+			margin-left: auto
+			max-width: 820px
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			z-index: 3
+
 		&__top 
 			display: flex
 			flex-direction: row
@@ -23,6 +50,8 @@
 			width: 100%
 			padding: 25px 0
 			margin-bottom: 12%
+			.header-info__phone
+				display: none
 		&__main 
 			h1 
 				+bold 
@@ -30,6 +59,7 @@
 				display: inline-block
 				width: 100%
 				margin: 0
+				margin-bottom: 70px
 		&__navbar,
 		&__menu
 			display: flex
@@ -60,6 +90,13 @@
 			color: #b41414
 			display: inline-block
 			margin-right: 50px
+			i 
+				font-family: 'FA-PS-900'
+				color: inherit
+				font-size: 4px
+				vertical-align: middle
+				margin-left: 2px
+				margin-right: 2px
 	&-slider
 		width: 40%
 		height: 100vh
@@ -88,11 +125,14 @@
 
 	&_single
 		flex-direction: column
+		.header-info__phone
+			display: inline-block
 		.header-info 
 			width: 100%
 			min-height: 0
 			padding: 0
 			height: auto
+			z-index: 4
 			&__top
 				padding-left: 0
 				padding-right: 0

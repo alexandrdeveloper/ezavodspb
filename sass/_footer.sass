@@ -1,9 +1,34 @@
 footer
-	background-image: url('../img/footer/footer-bg.jpg')
-	background-size: cover
-	background-position: center 
+	background-image: url('../img/product/blue-bg.jpg')
+	background-repeat: repeat	 
 	padding-top: 100px
 	padding-bottom: 50px
+	position: relative
+	z-index: 1
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-image: url('../img/footer/footer-bg-fig.jpg')
+		background-position: center 
+		background-size: auto 100%
+		background-repeat: no-repeat
+		z-index: -1	
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0 
+		bottom: 0
+		width: 50%
+		background-image: url('../img/footer/footer-bg-left.jpg')
+		background-repeat: repeat
+		z-index: -2	
 
 .footer 
 	&__container
@@ -11,6 +36,8 @@ footer
 		margin-left: auto
 		margin-right: auto
 		max-width: 1400px
+		z-index: 5
+		
 	&__row 
 		width: 100%
 	&__row 
@@ -25,6 +52,13 @@ footer
 		color: #fff
 		display: block
 		margin-bottom: 24px
+		i 
+			font-family: 'FA-PS-900'
+			color: inherit
+			font-size: 4px
+			vertical-align: middle
+			margin-left: 3px
+			margin-right: 3px
 	&__address,
 	&__email,
 	&__politics

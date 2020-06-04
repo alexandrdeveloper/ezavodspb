@@ -2,6 +2,7 @@
 	padding: 0
 	position: relative
 	z-index: 2
+	background-image: url('../img/header/bg.jpg')
 	
 	&::after
 		content: ''
@@ -14,15 +15,24 @@
 		background-image: url('../img/product/bg-light.jpg')
 		background-repeat: repeat
 		z-index: -1
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 100%
+		right: 70%
+		background-image: url('../img/product/blue-bg.jpg')		
+		background-repeat: repeat
 	&__container
 		display: flex
-		flex-direction: row
-		width: 100%		
+		flex-direction: row	
 		margin-left: auto
 		margin-right: auto
 		max-width: none
-		background-image: url('../img/product/dots-bg.png')
-		background-size: 100% auto 
+		background-image: url('../img/header/bg-map.png')
+		background-size: 80% auto 
 		background-position: center
 		background-repeat: no-repeat
 
@@ -42,15 +52,18 @@
 		padding-right: 70px
 		display: flex
 		justify-content: center
-		align-items: center
-		background-image: url('../img/product/blue-bg.jpg')	
-		background-size: 60% 100%
-		background-repeat: repeat-y
+		align-items: center		
+		position: relative
+		padding-left: 0
+		
+
 		&-container
 			height: 80%
 			width: 100%
 			position: relative
 			overflow: hidden
+			z-index: 2
+			max-width: 480px
 			img 
 				display: block
 				position: absolute
@@ -84,21 +97,7 @@
 				
 
 
-@media screen and (min-width: 1367px)
-	.product__item a
-		font-size: 18px
 
-@media screen and (min-width: 1600px)
-	.product__item a
-		font-size: 20px
-
-@media screen and (min-width: 1920px)
-	.product__item a
-		font-size: 24px
-
-@media screen and (min-width: 2170px)
-	.product__item a
-		font-size: 28px
 @media screen and (max-width: 1200px)
 	.product__item
 		margin-bottom: 12px

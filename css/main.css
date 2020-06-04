@@ -644,7 +644,8 @@ article {
       width: 100%;
       min-height: 0;
       padding: 0;
-      height: auto; }
+      height: auto;
+      z-index: 4; }
       .header_single .header-info__top {
         padding-left: 0;
         padding-right: 0;
