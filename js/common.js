@@ -38,7 +38,7 @@ $(document).ready(function() {
 		swipe: false,
 		responsive: [
 		{
-			breakpoint: 860,
+			breakpoint: 991,
 			settings: {
 				slidesToShow: 2,
 
@@ -54,20 +54,13 @@ $(document).ready(function() {
 		}]
 	});
 
-	$('.events-next').on('click', function() {
-		if (eventsSlider.hasClass('events__content_moved') == false) {
-			eventsSlider.addClass('events__content_moved');
-		} else {
-			eventsSlider.slick('slickNext');
-		}
+	$('.events-next').on('click', function() {		
+		eventsSlider.slick('slickNext');		
 	});
 
 	$('.events-prev').on('click', function() {
-		if (eventsSlider.hasClass('events__content_moved') == true) {
-			eventsSlider.removeClass('events__content_moved');
-		} else {
-			eventsSlider.slick('slickPrev');
-		}
+		eventsSlider.slick('slickPrev');
+	
 	});
 
 	
@@ -109,9 +102,7 @@ $(document).ready(function() {
 
 
 
-	$('.events__content .slick-next').on('click', function() {
-		eventsSlider.addClass('events__content_moved');
-	});
+	
 
 	let searchButton = $('.search');
 	let searchModal = $('.modal-search');
@@ -168,7 +159,8 @@ $(document).ready(function() {
 		
 	});
 
-	
+
+		
 
 	
 
@@ -186,46 +178,56 @@ $(document).ready(function() {
 	
 
 
+/**** Блок Продукт ****/
 
+	let productItem = $('.product__item');
 
-	let productItem = $('.product__item').find('a');
 
 	productItem.on('mouseover', function() {
-		let productImage = $(this).find('img');		
-		let productDisplay = $('.product__image-container');
+		let productImage = $(this).find('a').find('img');		
+		let productViewItem = $('.product__image-screen');
+		let productViewOutput = $('.product__image-container');
+
+
 		if (productImage) { 
-			return dataCopy(productImage, productDisplay).slideToggle(300);			
+			return dataCopy(productImage, productViewItem, productViewOutput);			
 		} else {
 			return false;
-		}	
-		
+		}		
 	});
 
-	function dataCopy(a, b) {
-		let newImg = a;
-		let oldImg = b.find('img');
-		oldImg.remove();
-		newImg.clone().appendTo(b);		
+
+
+	function dataCopy(listImg, viewItem, viewOutput) {	
+		viewOutput.find('.product__image-screen img').fadeOut(300).remove(200);	
 		
+		listImg.clone().appendTo(viewItem).fadeIn(300);
 		
+
+		
+
 		
 
 	}
+
+/**** Блок Продукт ****/
 
 	let menuSubLink = $('li.carret');
 	let subMenuContainer = $('.modal-menu__submenu');
 
 	
-
+	if ($(window).on)
 		
 	menuSubLink.on('click, mouseover', function(e) { 
-		e.preventDefault();		
+		e.preventDefault();						
 		subMenuContainer.find('ul').remove();
 		menuSubLink.removeClass('active');
 		$(this).toggleClass('active');					
 		$(this).find('ul').clone().appendTo(subMenuContainer);	
 		
 	});
+
+	
 
 	$('.carret-open').on('click', function(e) {
 		e.preventDefault();
