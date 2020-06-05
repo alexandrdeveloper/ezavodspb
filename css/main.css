@@ -1393,7 +1393,9 @@ article {
     right: auto;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-            transform: translateX(-50%); } }
+            transform: translateX(-50%); }
+  .events__title {
+    text-align: center; } }
 
 @media screen and (max-width: 460px) {
   .events__item-info {
@@ -1673,7 +1675,9 @@ article {
             align-items: center; }
   .product__item {
     max-width: 320px;
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .product::before {
+    display: none; } }
 
 .object {
   padding-top: 40px;
